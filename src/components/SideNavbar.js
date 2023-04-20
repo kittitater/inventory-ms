@@ -1,22 +1,20 @@
-
-
+import Link from "next/link";
 
 export default function SideNavbar() {
   return (
-    <div className ="flex h-screen flex-col justify-between border-r bg-blue-950">
+    <div className="flex h-screen flex-col justify-between border-r bg-blue-950  ">
       <div class="px-4 py-6">
         <span class="grid h-10 w-32 place-content-center rounded-lg bg-gray-100 text-xs text-gray-600">
           Logo
         </span>
         <nav aria-label="Main Nav" class="mt-7 flex flex-col space-y-1">
-          
-          <a
-            href="/dashboard"
-            class="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-2 text-gray-700"
+          <Link
+            href="/"
+            class="flex items-center gap-2 rounded-lg hover:bg-gray-100 hover:text-gray-700 px-4 py-2 text-white  active:bg-gray-100 active:text-gray-700"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 opacity-75"
+              class="h-5 w-5 "
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -35,54 +33,58 @@ export default function SideNavbar() {
             </svg>
 
             <span class="text-sm font-medium"> Dashboard </span>
-          </a>
+          </Link>
 
-          <a
-                href="/warehouse"
-                class="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 opacity-75"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-
-                <span class="text-sm font-medium"> Warehouse </span>
-              </a>
-
-          <a
-            href="/product"
-            class="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+          <Link
+            href="/warehouse"
+            class="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 opacity-75"
-              fill="none"
+              className="h-5 w-5 "
               viewBox="0 0 24 24"
+              fill="none"
               stroke="currentColor"
               stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-warehouse"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
-              />
+              <path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"></path>
+              <path d="M6 18h12"></path>
+              <path d="M6 14h12"></path>
+              <rect width="12" height="12" x="6" y="10"></rect>
+            </svg>
+
+            <span class="text-sm font-medium"> Warehouse </span>
+          </Link>
+
+          <Link
+            href="/product"
+            class="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 "
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-package"
+            >
+              <path d="M16.5 9.4 7.55 4.24"></path>
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.29 7 12 12 20.71 7"></polyline>
+              <line x1="12" x2="12" y1="22" y2="12"></line>
             </svg>
 
             <span class="text-sm font-medium"> Product </span>
-          </a>
-          
+          </Link>
+
           <details class="group [&_summary::-webkit-details-marker]:hidden">
-            <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+            <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700">
               <div class="flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -119,77 +121,78 @@ export default function SideNavbar() {
             </summary>
 
             <nav aria-label="Teams Nav" class="mt-2 flex flex-col px-4">
-              <a
+              <Link
                 href="/incoming-order"
-                class="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                class="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 opacity-75"
-                  fill="none"
+                  className="h-5 w-5"
                   viewBox="0 0 24 24"
+                  fill="none"
                   stroke="currentColor"
                   stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-shopping-cart"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
-                  />
+                  <circle cx="8" cy="21" r="1"></circle>
+                  <circle cx="19" cy="21" r="1"></circle>
+                  <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
                 </svg>
 
                 <span class="text-sm font-medium"> Incoming order </span>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/outgoing-order"
-                class="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                class="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 opacity-75"
-                  fill="none"
+                  className="h-5 w-5"
                   viewBox="0 0 24 24"
+                  fill="none"
                   stroke="currentColor"
                   stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-shopping-cart"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
+                  <circle cx="8" cy="21" r="1"></circle>
+                  <circle cx="19" cy="21" r="1"></circle>
+                  <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
                 </svg>
 
                 <span class="text-sm font-medium"> Outgoing order </span>
-              </a>
+              </Link>
             </nav>
           </details>
 
-          <a
+          <Link
             href="/return"
-            class="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+            class="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 opacity-75"
-              fill="none"
+              className="h-5 w-5"
               viewBox="0 0 24 24"
+              fill="none"
               stroke="currentColor"
               stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-corner-down-left"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
-              />
+              <polyline points="9 10 4 15 9 20"></polyline>
+              <path d="M20 4v7a4 4 0 0 1-4 4H4"></path>
             </svg>
 
             <span class="text-sm font-medium"> Return </span>
-          </a>
-
+          </Link>
 
           <details class="group [&_summary::-webkit-details-marker]:hidden">
-            <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+            <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700">
               <div class="flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -226,9 +229,9 @@ export default function SideNavbar() {
             </summary>
 
             <nav aria-label="Account Nav" class="mt-2 flex flex-col px-4">
-              <a
+              <Link
                 href="#"
-                class="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                class="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -246,11 +249,11 @@ export default function SideNavbar() {
                 </svg>
 
                 <span class="text-sm font-medium"> Details </span>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="#"
-                class="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                class="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -268,12 +271,12 @@ export default function SideNavbar() {
                 </svg>
 
                 <span class="text-sm font-medium"> Security </span>
-              </a>
+              </Link>
 
               <form action="/logout">
                 <button
                   type="submit"
-                  class="flex w-full items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                  class="flex w-full items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -299,7 +302,7 @@ export default function SideNavbar() {
       </div>
 
       <div class="sticky inset-x-0 bottom-0 border-t border-gray-100">
-        <a
+        <Link
           href="#"
           class="flex items-center gap-2 bg-white p-4 hover:bg-gray-50"
         >
@@ -316,7 +319,7 @@ export default function SideNavbar() {
               <span> eric@frusciante.com </span>
             </p>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );
