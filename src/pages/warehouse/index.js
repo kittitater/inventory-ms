@@ -7,7 +7,7 @@ export default function Warehouse() {
   return (
     <div>
       <Head>
-        <title>Warehouse</title>
+        
       </Head>
       {/* <Link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js" /> */}
@@ -132,7 +132,7 @@ export default function Warehouse() {
       </div>
 
       <div class="flex flex-col items-center justify-center min-h-min py-10 bg-gray-100 sm:px-6 lg:px-8">
-        <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow xl:flex-row xl:max-w-3xl pr-10 ">
+        <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow lg:flex-row lg:max-w-3xl md:px-4 md:py-4 ">
           <img
             class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
             src="https://www.novabizz.com/uploads/post/717804-1.jpg"
@@ -150,7 +150,7 @@ export default function Warehouse() {
             <p>Email : abc@gmail.com</p>
             <p>Tel: 080-000-0000</p>
           </div>
-          <div className=" ">
+          <div className="flex felx-col justify-start ">
             <button
               id="dropdownDefaultButton"
               data-dropdown-toggle="dropdown"

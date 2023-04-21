@@ -5,7 +5,7 @@ export default function IncomingOrder() {
   return (
     <>
       <Head>
-        <title>Incoming order</title>
+      
       </Head>
       {/* <Layout> */}
         <nav class="bg-white  w-full z-20 top-0 left-0 border-b border-gray-200 ">

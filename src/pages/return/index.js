@@ -4,7 +4,7 @@ export default function Return() {
   return (
     <div>
       <Head>
-        <title>Return</title>
+       
       </Head>
       <nav class="bg-white  w-full z-20 top-0 left-0 border-b border-gray-200 ">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
