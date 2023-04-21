@@ -3,8 +3,11 @@ import Link from "next/link";
 export default function SideNavbar() {
   return (
     <aside className="flex h-screen flex-col justify-between border-r bg-blue-950  ">
-      <div class="px-4 py-6">
-        <div className="flex items-center gap-2 text-white">
+      <div class="px-4 py-4 ">
+        <Link
+          href="/"
+          className="flex items-center px-4 gap-4 text-white mx-auto mt-2 mb-6"
+        >
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,35 +29,103 @@ export default function SideNavbar() {
           <div>
             <h1 class="text-white font-bold text-lg">Inventory MS</h1>
           </div>
-        </div>
-        <nav aria-label="Main Nav" class="mt-7 flex flex-col space-y-1">
-          <Link
-            href="/"
-            class="flex items-center gap-2 rounded-lg hover:bg-gray-100 hover:text-gray-700 px-4 py-2 text-white  active:bg-gray-100 active:text-gray-700"
+        </Link>
+        <nav aria-label="Main Nav" class=" flex flex-col space-y-1">
+          <div
+            href="#"
+            class=" items-center gap-2  border-t border-gray-200 py-4 space-y-4 "
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 "
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
+            <img
+              alt="Man"
+              src="https://kittitater.github.io/mybio/bio.jpg"
+              class="h-20 w-20 rounded-full object-cover mx-auto "
+            />
+            <div>
+              <p class=" text-xs text-white text-center space-y-4">
+                <strong class="block font-medium text-lg ">
+                  Kittitat Songsakseree
+                </strong>
+                <span className="font-light"> kittitat.song@kmutt.ac.th </span>
+              </p>
+            </div>
+            <div className="flex flex-row items-center justify-center gap-8 ">
+              <Link
+                href="/"
+                class="text-white bg-blue-950 hover:bg-gray-100 hover:text-gray-700  font-medium rounded-lg text-sm px-2 py-2 text-center inline-flex items-center border border-white "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 "
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                <span class="sr-only">Edit profile</span>
+              </Link>
+
+              <Link
+                href="/"
+                class="text-white bg-blue-950 hover:bg-gray-100 hover:text-gray-700  font-medium rounded-lg text-sm px-2 py-2 text-center inline-flex items-center border border-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                  />
+                </svg>
+                <span class="sr-only">Logout</span>
+              </Link>
+            </div>
+          </div>
+
+          <div className=" pt-4 border-t  border-gray-200">
+            <Link
+              href="/"
+              class="flex items-center gap-2 rounded-lg hover:bg-gray-100 hover:text-gray-700 px-4 py-2 text-white  active:bg-gray-100 active:text-gray-700"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-              />
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 "
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
 
-            <span class="text-sm font-medium"> Dashboard </span>
-          </Link>
-
+              <span class="text-sm font-medium"> Dashboard </span>
+            </Link>
+          </div>
           <Link
             href="/warehouse"
             class="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700 "
@@ -140,7 +211,10 @@ export default function SideNavbar() {
               </span>
             </summary>
 
-            <nav aria-label="Teams Nav" class="mt-2 flex flex-col px-4">
+            <nav
+              aria-label="Teams Nav"
+              class="mt-2 flex flex-col px-4 space-y-1"
+            >
               <Link
                 href="/incoming-order"
                 class="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700"
@@ -248,8 +322,11 @@ export default function SideNavbar() {
               </span>
             </summary>
 
-            <nav aria-label="Account Nav" class="mt-2 flex flex-col px-4">
-              <Link
+            <nav
+              aria-label="Account Nav"
+              class="mt-2 flex flex-col px-4 space-y-1"
+            >
+              {/* <Link
                 href="#"
                 class="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700"
               >
@@ -269,9 +346,9 @@ export default function SideNavbar() {
                 </svg>
 
                 <span class="text-sm font-medium"> Details </span>
-              </Link>
+              </Link> */}
 
-              <Link
+              {/* <Link
                 href="#"
                 class="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700"
               >
@@ -291,7 +368,7 @@ export default function SideNavbar() {
                 </svg>
 
                 <span class="text-sm font-medium"> Security </span>
-              </Link>
+              </Link> */}
 
               <form action="/logout">
                 <button
@@ -321,26 +398,22 @@ export default function SideNavbar() {
         </nav>
       </div>
 
-      <div class="sticky inset-x-0 bottom-0 border-t border-gray-100">
+      {/* <div>
         <Link
           href="#"
-          class="flex items-center gap-2 bg-white p-4 hover:bg-gray-50"
-        >
+          class="flex items-center gap-2 bg-white p-4 hover:bg-gray-50">
           <img
             alt="Man"
             src="https://kittitater.github.io/mybio/bio.jpg"
-            class="h-10 w-10 rounded-full object-cover"
-          />
-
+            class="h-10 w-10 rounded-full object-cover" />
           <div>
             <p class="text-xs">
               <strong class="block font-medium">Kittitat Songsakseree</strong>
-
               <span> kittitat.song@kmutt.ac.th </span>
             </p>
           </div>
         </Link>
-      </div>
+      </div> */}
     </aside>
   );
 }
