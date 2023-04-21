@@ -3,9 +3,9 @@ import Head from "next/head";
 
 export default function Product() {
   return (
-    <div>
+    <div className="sm:ml-60">
       <Head>
-        
+      <title>Inventory MS - Product</title>
       </Head>
       {/* <Layout> */}
       <nav class="bg-white w-full z-20 top-0 left-0 border-b border-gray-200 ">

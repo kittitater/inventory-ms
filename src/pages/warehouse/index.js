@@ -5,14 +5,15 @@ import Link from "next/link";
 
 export default function Warehouse() {
   return (
-    <div>
+    <div className="sm:ml-60">
       <Head>
-        
+        <title>Inventory MS - Warehouse</title>
       </Head>
       {/* <Link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js" /> */}
       {/* <Layout> */}
-      <nav class="bg-white w-full z-20 top-0 left-0 border-b border-gray-200 ">
+      
+      <nav class=" bg-white w-full z-20 top-0 left-0 border-b border-gray-200 ">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="flex items-center">
             {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo"> */}
