@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function Return() {
   return (
-    <div className="sm:ml-60">
+    <div className="sm:ml-64">
       <Head>
       <title>Inventory MS - Return</title>
       </Head>

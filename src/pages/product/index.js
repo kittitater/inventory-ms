@@ -3,7 +3,7 @@ import Head from "next/head";
 
 export default function Product() {
   return (
-    <div className="sm:ml-60">
+    <div className="sm:ml-64">
       <Head>
       <title>Inventory MS - Product</title>
       </Head>

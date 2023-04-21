@@ -1,7 +1,7 @@
 export default function Welcome() {
   return (
     <section>
-      <div class="mx-auto max-w-screen-xl sm:py-12 sm:px-6 lg:py-5 lg:px-8 bg-slate-100 "> 
+      <div class="mx-auto max-w-screen sm:py-12 sm:px-6 lg:py-5 lg:px-8 bg-slate-100 "> 
         <div class="">
           
           <div class="lg:py-24 text-center">

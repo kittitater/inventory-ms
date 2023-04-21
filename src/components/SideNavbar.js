@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function SideNavbar() {
   return (
-    <aside className="fixed top-0 left-0 w-60 h-screen flex-col justify-between border-r bg-blue-950  ">
+    <aside className="fixed top-0 left-0 z-40 w-64 h-screen flex-col justify-between border-r bg-blue-950  ">
       <div class="px-4 py-4 ">
         <Link
           href="/"
@@ -397,7 +397,7 @@ export default function SideNavbar() {
             </details>
           </div>
 
-          <footer class=" bottom-0 left-0 z-20 max-w-fit  bg-blue-950  shadow md:flex md:items-center md:justify-between md:pt-10 md:mt-10   ">
+          <footer class=" bottom-0 left-0 z-20 max-w-fit  bg-blue-950  shadow md:flex md:items-center md:justify-between md:pt-5 md:mt-10   ">
             <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               © 2023{" "}
               <Link href="https://kittitat-bio.vercel.app/" target="_blank" class="hover:underline">

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function OutgoingOrder() {
   return (
-    <div className="sm:ml-60">
+    <div className="sm:ml-64">
       <Head>
       <title>Inventory MS - Outgoing Order</title>
       </Head>
