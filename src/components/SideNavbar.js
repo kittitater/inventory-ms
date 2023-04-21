@@ -397,11 +397,11 @@ export default function SideNavbar() {
             </details>
           </div>
 
-          <footer class=" bottom-0 left-0 z-20 max-w-fit  bg-blue-950  shadow md:flex md:items-center md:justify-between md:pt-5 md:mt-10   ">
+          <footer class=" bottom-0 left-0 z-20 max-w-fit  bg-blue-950  shadow sm:flex sm:items-center sm:justify-between md:pt-5 md:mt-10 sm:px-8  ">
             <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               © 2023{" "}
-              <Link href="https://kittitat-bio.vercel.app/" target="_blank" class="hover:underline">
-                Kittitat Songsakseree™
+              <Link href="#" target="_blank" class="hover:underline">
+                Inventory MS™
               </Link>
               . All Rights Reserved.
             </span>
