@@ -8,11 +8,12 @@ export default function Warehouse() {
     <div className="sm:ml-64">
       <Head>
         <title>Inventory MS - Warehouse</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
       </Head>
       {/* <Link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js" /> */}
       {/* <Layout> */}
-      
+
       <nav class=" bg-white w-full z-20 top-0 left-0 border-b border-gray-200 ">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="flex items-center">
@@ -43,14 +44,12 @@ export default function Warehouse() {
 
           <div class="flex md:order-2">
             <button
+              data-modal-target="defaultModal"
+              data-modal-toggle="defaultModal"
+              class="block text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-5 py-2.5 text-center "
               type="button"
-              class="text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 "
-              data-te-toggle="modal"
-              data-te-target="#exampleModalCenter"
-              data-te-ripple-init
-              data-te-ripple-color="light"
             >
-              Add new Warehouse
+              Add New Warehouse
             </button>
           </div>
         </div>
@@ -58,74 +57,208 @@ export default function Warehouse() {
 
       {/* <!--Verically centered modal--> */}
       <div
-        data-te-modal-init
-        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-        id="exampleModalCenter"
+        id="defaultModal"
         tabindex="-1"
-        aria-labelledby="exampleModalCenterTitle"
-        aria-modal="true"
-        role="dialog"
+        aria-hidden="true"
+        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
       >
-        <div
-          data-te-modal-dialog-ref
-          class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]"
-        >
-          <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
-            <div class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
-              {/* <!--Modal title--> */}
-              <h5
-                class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
-                id="exampleModalScrollableLabel"
-              >
-                Modal title
-              </h5>
-              {/* <!--Close button--> */}
-              <button
-                type="button"
-                class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
-                data-te-modal-dismiss
-                aria-label="Close"
-              >
+        <div class="relative w-full max-w-2xl max-h-full">
+          {/* <!-- Modal content --> */}
+          <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            {/* <!-- Modal header --> */}
+            <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+              <div className="mr-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
+                  width="32"
+                  height="32"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  fill="none"
                   stroke="currentColor"
-                  class="h-6 w-6"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-warehouse"
+                >
+                  <path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"></path>
+                  <path d="M6 18h12"></path>
+                  <path d="M6 14h12"></path>
+                  <rect width="12" height="12" x="6" y="10"></rect>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                New Warehouse
+              </h3>
+              <button
+                type="button"
+                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                data-modal-hide="defaultModal"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
+                    fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
                 </svg>
+                <span class="sr-only">Close modal</span>
               </button>
             </div>
-
-            {/* <!--Modal body--> */}
-            <div class="relative p-4">
-              <p>This is a vertically centered modal.</p>
+            {/* <!-- Modal body --> */}
+            <div class="">
+              <form class="" action="Insert.php" method="post">
+                <div class="items-center px-6 py-4 bg-gray-100 space-y-4   ">
+                  <div className="flex flex-row space-x-16">
+                    <label
+                      for="product name"
+                      class="block mb-2 text-sm font-medium text-gray-900 "
+                    >
+                      Manager Name
+                    </label>
+                    <input
+                      type="text"
+                      id="product_name"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 p-2.5"
+                      required
+                    />
+                  </div>
+                  <div className="flex flex-row space-x-12">
+                    <label
+                      for="product name"
+                      class="block mb-2 text-sm font-medium text-gray-900 "
+                    >
+                      Warehouse Name
+                    </label>
+                    <input
+                      type="text"
+                      id="product_name"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 p-2.5"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="px-6 py-4 grid gap-4 mb-4 md:grid-cols-2">
+                  {/* <div class="mb-4 flex flex-row space-x-4"> */}
+                  <div>
+                    <label
+                      for="street address"
+                      class="block mb-2 text-sm font-medium text-gray-900 "
+                    >
+                      Street address
+                    </label>
+                    <input
+                      type="text"
+                      id="street_address"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                      placeholder="Phayathai"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="city"
+                      class="block mb-2 text-sm font-medium text-gray-900 "
+                    >
+                      City / District
+                    </label>
+                    <input
+                      type="text"
+                      id="city"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                      placeholder="Pathumwan"
+                      required
+                    />
+                    {/* </div> */}
+                  </div>
+                  <div>
+                    <label
+                      for="state"
+                      class="block mb-2 text-sm font-medium text-gray-900 "
+                    >
+                      State / Province
+                    </label>
+                    <input
+                      type="text"
+                      id="state"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
+                      placeholder="Bangkok"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="Zip code"
+                      class="block mb-2 text-sm font-medium text-gray-900"
+                      
+                    >
+                      Zip code
+                    </label>
+                    <input
+                      type="text"
+                      id="zipcode"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
+                      placeholder="11111"
+                      required
+                    />
+                    {/* </div> */}
+                  </div>
+                </div>
+                <div class=" px-6 py-4 bg-gray-100 grid gap-4 md:grid-cols-2">
+                  <div>
+                    <label
+                      for="phone"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      Phone number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-56 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="123-456-6789"
+                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block mb-2 text-sm font-medium text-gray-900 "
+                    >
+                      Email address
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-56 p-2.5  "
+                      placeholder="example@mail.com"
+                      required
+                    />
+                  </div>
+                </div>
+              </form>
             </div>
-
-            {/* <!--Modal footer--> */}
-            <div class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+            {/* <!-- Modal footer --> */}
+            <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
               <button
+                data-modal-hide="defaultModal"
                 type="button"
-                class="inline-block rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200"
-                data-te-modal-dismiss
-                data-te-ripple-init
-                data-te-ripple-color="light"
+                class="text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-5 py-2.5 text-center "
               >
-                Close
+                Confirm
               </button>
               <button
+                data-modal-hide="defaultModal"
                 type="button"
-                class="ml-1 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                data-te-ripple-init
-                data-te-ripple-color="light"
+                class="text-gray-500 bg-white hover:bg-gray-100  rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 "
               >
-                Save changes
+                Cancel
               </button>
             </div>
           </div>
@@ -157,7 +290,8 @@ export default function Warehouse() {
               data-dropdown-toggle="dropdown"
               class="text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
               type="button"
-            >Dropdown
+            >
+              Dropdown
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-4 h-4 mx-3"

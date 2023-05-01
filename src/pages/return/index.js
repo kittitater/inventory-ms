@@ -5,6 +5,7 @@ export default function Return() {
     <div className="sm:ml-64">
       <Head>
       <title>Inventory MS - Return</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
       </Head>
       <nav class="bg-white  w-full z-20 top-0 left-0 border-b border-gray-200 ">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">

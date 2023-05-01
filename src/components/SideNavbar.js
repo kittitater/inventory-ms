@@ -27,22 +27,22 @@ export default function SideNavbar() {
             </svg>
           </div>
           <div>
-            <h1 class="text-white font-bold text-lg">Inventory MS</h1>
+            <h1 className="text-white font-bold text-lg">Inventory MS</h1>
           </div>
         </Link>
-        <nav aria-label="Main Nav" class=" flex flex-col space-y-1">
+        <nav aria-label="Main Nav" className=" flex flex-col space-y-1">
           <div
             href="#"
-            class=" items-center gap-2  border-t border-gray-200 py-4 space-y-4 "
+            className=" items-center gap-2  border-t border-gray-200 py-4 space-y-4 "
           >
             <img
               alt="Man"
               src="https://kittitater.github.io/mybio/bio.jpg"
-              class="h-20 w-20 rounded-full object-cover mx-auto "
+              className="h-20 w-20 rounded-full object-cover mx-auto "
             />
             <div>
-              <p class=" text-xs text-white text-center space-y-4">
-                <strong class="block font-medium text-lg ">
+              <p className=" text-xs text-white text-center space-y-4">
+                <strong className="block font-medium text-lg ">
                   Kittitat Songsakseree
                 </strong>
                 <span className="font-light"> kittitat.song@kmutt.ac.th </span>
@@ -51,11 +51,11 @@ export default function SideNavbar() {
             <div className="flex flex-row items-center justify-center gap-8 ">
               <Link
                 href="/"
-                class="text-white bg-blue-950 hover:bg-gray-100 hover:text-gray-700  font-medium rounded-lg text-sm px-2 py-2 text-center inline-flex items-center border border-white "
+                className="text-white bg-blue-950 hover:bg-gray-100 hover:text-gray-700  font-medium rounded-lg text-sm px-2 py-2 text-center inline-flex items-center border border-white "
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 "
+                  className="h-5 w-5 "
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -72,16 +72,16 @@ export default function SideNavbar() {
                     d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span class="sr-only">Edit profile</span>
+                <span className="sr-only">Edit profile</span>
               </Link>
 
               <Link
                 href="/"
-                class="text-white bg-blue-950 hover:bg-gray-100 hover:text-gray-700  font-medium rounded-lg text-sm px-2 py-2 text-center inline-flex items-center border border-white"
+                className="text-white bg-blue-950 hover:bg-gray-100 hover:text-gray-700  font-medium rounded-lg text-sm px-2 py-2 text-center inline-flex items-center border border-white"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
+                  className="h-5 w-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -93,7 +93,7 @@ export default function SideNavbar() {
                     d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
                   />
                 </svg>
-                <span class="sr-only">Logout</span>
+                <span className="sr-only">Logout</span>
               </Link>
             </div>
           </div>
@@ -102,11 +102,11 @@ export default function SideNavbar() {
           <div className=" overflow-auto h-72 space-y-2 ">
             <Link
               href="/"
-              class="flex items-center gap-2 rounded-lg hover:bg-gray-100 hover:text-gray-700 px-4 py-2 text-white  active:bg-gray-100 active:text-gray-700"
+              className="flex items-center gap-2 rounded-lg hover:bg-gray-100 hover:text-gray-700 px-4 py-2 text-white  active:bg-gray-100 active:text-gray-700"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 "
+                className="h-5 w-5 "
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -124,11 +124,11 @@ export default function SideNavbar() {
                 />
               </svg>
 
-              <span class="text-sm font-medium"> Dashboard </span>
+              <span className="text-sm font-medium"> Dashboard </span>
             </Link>
             <Link
               href="/warehouse"
-              class="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700 "
+              className="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700 "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -147,12 +147,12 @@ export default function SideNavbar() {
                 <rect width="12" height="12" x="6" y="10"></rect>
               </svg>
 
-              <span class="text-sm font-medium"> Warehouse </span>
+              <span className="text-sm font-medium"> Warehouse </span>
             </Link>
 
             <Link
               href="/product"
-              class="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700"
+              className="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:bg-gray-100 hover:text-gray-700"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -213,7 +213,7 @@ export default function SideNavbar() {
 
               <nav
                 aria-label="Teams Nav"
-                class="mt-2 flex flex-col px-4 space-y-1"
+                class="mt-2 flex flex-col px-4 space-y-2"
               >
                 <Link
                   href="/incoming-order"
@@ -324,7 +324,7 @@ export default function SideNavbar() {
 
               <nav
                 aria-label="Account Nav"
-                class="mt-2 flex flex-col px-4 space-y-1"
+                class="mt-2 flex flex-col px-4 space-y-2"
               >
                 <Link
                   href="#"
