@@ -13,8 +13,6 @@ import {
     HiOutlineArrowRightOnRectangle
 } from "react-icons/hi2";
 import {FaWarehouse} from "react-icons/fa";
-import {useState} from "react";
-
 
 export default function SideNavbar() {
     return (
