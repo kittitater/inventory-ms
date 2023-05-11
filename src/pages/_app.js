@@ -12,9 +12,8 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/warehouse.svg" />
       </Head>
       <Layout>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
       </Layout>
     </>
   );
 }
-
